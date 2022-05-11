@@ -1,0 +1,17 @@
+region: ap-northeast-1
+cluster: ojisan
+rules:
+- name: every1845
+  description: 毎日18:45に実行
+  scheduleExpression: cron(45 9 * * ? *)
+  targetId: ojisan-evening
+  taskDefinition: ojisan:2
+  launch_type: FARGATE
+  platform_version: LATEST
+  network_configuration:
+    aws_vpc_configuration:
+      subnets:
+      - subnet-0672a432f3f19adbe
+      security_groups:
+      - sg-0ac9469c456ae09b5
+      assign_public_ip: ENABLED
