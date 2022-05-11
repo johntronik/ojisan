@@ -2,8 +2,8 @@ region: ap-northeast-1
 cluster: ojisan
 rules:
 - name: every1845
-  description: 毎日18:45に実行
-  scheduleExpression: cron(45 9 * * ? *)
+  description: 毎日10:00に実行
+  scheduleExpression: cron(0 1 * * ? *)
   targetId: ojisan-evening
   taskDefinition: ojisan
   launch_type: FARGATE
