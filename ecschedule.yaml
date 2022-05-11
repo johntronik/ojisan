@@ -5,7 +5,7 @@ rules:
   description: 毎日18:45に実行
   scheduleExpression: cron(45 9 * * ? *)
   targetId: ojisan-evening
-  taskDefinition: ojisan:2
+  taskDefinition: ojisan
   launch_type: FARGATE
   platform_version: LATEST
   network_configuration:
