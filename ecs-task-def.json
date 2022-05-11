@@ -1,0 +1,27 @@
+{
+  "family": "ojisan",
+  "executionRoleArn": "arn:aws:iam::013712717522:role/ojisan",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "256",
+  "memory": "512",
+  "containerDefinitions": [
+    {
+      "name": "ojisan",
+      "image": "013712717522.dkr.ecr.ap-northeast-1.amazonaws.com/ojisan",
+      "essential": true,
+      "environment": [
+        {
+          "name": "NAME",
+          "value": "じょん"
+        }
+      ],
+      "secrets": [
+        {
+            "name": "WEB_HOOK_URL",
+            "valueFrom": "WEB_HOOK_URL"
+        }
+      ]
+    }
+  ]
+}
